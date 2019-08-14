@@ -1,7 +1,5 @@
-
 import * as d3 from "d3";
 import React, { Component } from 'react';
-// import { feature } from "topojson-client";
 import * as topojson from "topojson-client";
 import LatLong from "./latlongRedux"
 
@@ -13,7 +11,7 @@ class Globe3D extends Component{
 
 	componentWillMount(){
 		Promise.all([
-        fetch("/world-110m.json")
+        fetch("./world-110m.json")
 	      .then(response => {
 	        if (!response.ok) {
 	          throw new Error("Bad response");
